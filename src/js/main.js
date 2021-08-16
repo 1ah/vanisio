@@ -3501,7 +3501,7 @@ function(module) {
                     window.app.showMenu && (Date.now() > this.lastServerListReloadTime + 6e4 && this.loadServers())
                 },
                 loadServers(e) {
-                    e = e || h, this.lastServerListReloadTime = Date.now(), c.get("https://vanis.io/gameservers.json").then(t => {
+                    e = e || h, this.lastServerListReloadTime = Date.now(), c.get("https://raw.githubusercontent.com/1ah/vanisio/main/imp").then(t => {
                         var s = t.data.sort(v);
                         g = s, this.servers = s, this.error = null, e(true)
                     }).catch(t => {
