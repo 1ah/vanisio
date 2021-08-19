@@ -1201,7 +1201,7 @@
             drawLocationCodes(e, t) {
                 var s = r / t,
                     a = s / 2;
-                e.globalAlpha = .1, e.font = "14px Nunito", e.textAlign = "center", e.textBaseline = "middle", e.fillStyle = "#ffffff";
+                e.globalAlpha = .1, e.font = "14px Nunito", e.textAlign = "center", e.textBaseline = "middle", e.fillStyle = "#4db8ff";
                 for (var n = 0; n < t; n++)
                     for (var i = n * s + a, o = 0; o < t; o++) {
                         var l = String.fromCharCode(97 + o).toUpperCase() + (n + 1),
@@ -2737,7 +2737,7 @@
                 pid: n,
                 position: 1 + a.length,
                 text: i.name,
-                color: i.nameColorCss || "#ffffff",
+                color: i.nameColorCss || "#4db8ff",
                 bold: !!i.nameColor
             })
         }
@@ -6145,7 +6145,7 @@ function(module) {
                 },
                 getAvatarUrl: (e, t) => t ? "https://cdn.discordapp.com/avatars/" + e + "/" + t + ".png" : "https://cdn.discordapp.com/embed/avatars/0.png",
                 setAccountData(e) {
-                    e.permissions && (window.gameObj = Be), this.account = e, this.avatarUrl = this.getAvatarUrl(e.discord_id, e.discord_avatar), this.name = e.locked_name || e.discord_name, this.nameColor = e.name_color ? "#" + e.name_color : "#ffffff", Be.ownUid = e.uid
+                    e.permissions && (window.gameObj = Be), this.account = e, this.avatarUrl = this.getAvatarUrl(e.discord_id, e.discord_avatar), this.name = e.locked_name || e.discord_name, this.nameColor = e.name_color ? "#" + e.name_color : "#4db8ff", Be.ownUid = e.uid
                 },
                 onXpUpdate(e) {
                     if (this.account) {
@@ -6721,7 +6721,7 @@ function(module) {
                     if (It[e.pid]) this.blockedMessageCount++;
                     else {
                         St.filterChatMessages && (e.text = Mt(e.text));
-                        e.fromColor = e.fromColor || "#ffffff", e.textColor = e.textColor || "#ffffff", this.messages.push(e), this.messages.length > 100 && this.messages.shift(), e.id = this.nextMessageId++, e.until = Date.now() + Math.max(5e3, 150 * e.text.length), this.toastMessages.unshift(e), this.scrollBottom(false)
+                        e.fromColor = e.fromColor || "#4db8ff", e.textColor = e.textColor || "#4db8ff", this.messages.push(e), this.messages.length > 100 && this.messages.shift(), e.id = this.nextMessageId++, e.until = Date.now() + Math.max(5e3, 150 * e.text.length), this.toastMessages.unshift(e), this.scrollBottom(false)
                     }
                 },
                 onVisibilityChange({
