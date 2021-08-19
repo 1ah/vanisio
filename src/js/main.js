@@ -5908,7 +5908,7 @@ function(module) {
                     var t = e.data;
                     t.forEach(e => {
                         var t = e.name_color;
-                        e.name_color = t ? "#" + t : "white";
+                        e.name_color = t ? "#" + t : "blue";
                         var s = e.locked_name || e.discord_name;
                         _e(s) && (s = "********"), e.name = s
                     }), this.playerList = t, this.seasonEndTimeInterval = setInterval(this.setSeasonEndTime.bind(this), 1e3), this.setSeasonEndTime()
